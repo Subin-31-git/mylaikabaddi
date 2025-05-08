@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Form Submitted</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 480px;
+      min-height: 700px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 0.9s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #ff4d4d;
+      letter-spacing: 1px;
+    }
+
+    .qr-section {
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      margin-bottom: 30px;
+      transition: all 0.4s ease;
+    }
+
+    .qr-section:hover {
+      transform: scale(1.02);
+      border: 1px solid #00e0ff;
+      box-shadow: 0 0 10px #00e0ff88;
+    }
+
+    .qr-section h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .qr-section p {
+      font-size: 14px;
+      color: #cccccc;
+      margin-bottom: 16px;
+    }
+
+    .qr-image {
+      width: 200px;
+      height: 240px;
+      border-radius: 12px;
+      border: 2px solid #00c9ff;
+      box-shadow: 0 0 12px #00c9ff66;
+      transition: 0.3s;
+    }
+
+    .qr-image:hover {
+      box-shadow: 0 0 25px #00c9ff;
+    }
+
+    .contact-info {
+      font-size: 14px;
+      color: #bbbbbb;
+      margin-top: 20px;
+    }
+
+    .contact-btn {
+      margin-top: 10px;
+      padding: 10px 22px;
+      background: linear-gradient(to right, #00c9ff, #92fe9d);
+      border: none;
+      border-radius: 30px;
+      color: #000;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.4s ease;
+    }
+
+    .contact-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #92fe9d, #00c9ff);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>THANKS! Your form is submitted</h1>
+    <div class="qr-section">
+      <h2>For online payment</h2>
+      <p>Scan this QR code</p>
+      <img src="jqr.jpg" alt="QR Code" class="qr-image">
+    </div>
+    <div class="contact-info">
+      For any doubts?!
+      <br />
+      <button class="contact-btn">Contact: 9345409743</button>
+    </div>
+  </div>
+</body>
+</html>
