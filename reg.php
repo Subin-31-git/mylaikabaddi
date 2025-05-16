@@ -146,7 +146,7 @@
       <input type="number" id="number" name="number" placeholder="உங்கள் எண்ணை உள்ளிடவும்">
       <span id="a2"></span>
     
-      <button type="submit" onclick="nextPage(event)">சமர்ப்பிக்கவும் (Submit)</button>
+      <button type="submit" name="btn">சமர்ப்பிக்கவும் (Submit)</button>
     </form>
   <?php
     if(isset($_POST['btn'])){
