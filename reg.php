@@ -137,7 +137,7 @@
     <p>இராயப்பர் சின்னப்பர் கபாடிக் குழு நடத்தும் மாபெரும் முதலாம் ஆண்டு கபாடிப் போட்டி</p>
     <div class="notice">நுழைவுக் கட்டணம் ரூ.301/- மட்டுமே</div>
 
-    <form id="registerForm">
+    <form id="registerForm" method="POST" action="reg.php">
       <label for="place">அணியின் பெயர்(Team Name)</label>
       <input type="text" id="place" name="place" placeholder="உங்கள் இடத்தை உள்ளிடவும்">
       <span id="a1"></span>
