@@ -153,7 +153,7 @@
     $place=$_POST['place'];
     $number=$_POST['number'];
 
-    $con=mysqli_connect("localhost","root","","kabbadi");
+    $con=mysqli_connect("localhost","root"," ","kabbadi");
     if($con){
         echo"successful";
 
