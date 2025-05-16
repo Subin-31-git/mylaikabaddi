@@ -165,6 +165,7 @@
     $sql=mysqli_query($con,$qry);
     if($sql){
         header("Location: sub.html");
+        exit();
     }
         else{
             echo"failed";
