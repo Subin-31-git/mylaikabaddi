@@ -152,7 +152,7 @@
     if(isset($_POST['btn'])){
     $place=$_POST['place'];
     $number=$_POST['number'];
-
+     echo "hi";
     $con=mysqli_connect("localhost","root"," ","kabbadi");
     if($con){
         echo"successful";
