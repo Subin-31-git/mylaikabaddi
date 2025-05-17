@@ -150,7 +150,7 @@
     </form>
  <?php
 // Connect to MySQL
-$conn = new mysqli("localhost", "root", "", "kabaddi");
+$conn = new mysqli("localhost", "root", "", "kabbadi");
 
 // Check connection
 if ($conn->connect_error) {
