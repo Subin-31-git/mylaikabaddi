@@ -142,13 +142,16 @@
       <input type="text" id="place" name="place" placeholder="உங்கள் இடத்தை உள்ளிடவும்">
       <span id="a1"></span>
     
-      <label for="number">தொலைபேசி எண் (Phone Number)</label>
-      <input type="number" id="number" name="number" placeholder="உங்கள் எண்ணை உள்ளிடவும்">
+      <label for="phone_number">தொலைபேசி எண் (Phone Number)</label>
+      <input type="number" id="phone_number" name="phone_number" placeholder="உங்கள் எண்ணை உள்ளிடவும்">
       <span id="a2"></span>
     
       <button type="submit" name="btn">சமர்ப்பிக்கவும் (Submit)</button>
     </form>
  <?php
+ if(isset($_POST['btn']))
+ {
+   
 // Connect to MySQL
 $conn = new mysqli("localhost", "root", "", "kabbadi");
 
@@ -157,12 +160,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Get JSON data from frontend
-$data = json_decode(file_get_contents("php://input"), true);
 
-$team_name = $conn->real_escape_string($data['team_name']);
-$place = $conn->real_escape_string($data['place']);
-$phone_number = $conn->real_escape_string($data['phone_number']);
+// Get JSON data from frontend
+//$data = json_decode(file_get_contents("php://input"), true);
+
+$team_name = $_POST['team_name'];
+$place = $_POST['place'];
+$phone_number = $_POST['phone_number'];
 
 // Insert into database
 $sql = "INSERT INTO registrations (team_name, place, phone_number) VALUES ('$team_name', '$place', '$phone_number')";
@@ -176,5 +180,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+ }
 ?>
 </html>
+
